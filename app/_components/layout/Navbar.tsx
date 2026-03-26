@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -22,7 +23,13 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
         {/* Logo */}
-        <h1 className={`text-white text-xl tracking-wide`}>UNIQUE HAIR</h1>
+        <Link href="/" className="flex items-center">
+          <img
+            src="/images/unique-logo2.png"
+            alt="Unique Hair Braiding Logo"
+            className="h-12 w-auto object-contain rounded-2xl shadow-2xl"
+          />
+        </Link>
 
         {/* Nav Links */}
         <nav className="hidden md:flex items-center gap-8 text-white text-sm tracking-wide">
@@ -38,7 +45,7 @@ export default function Navbar() {
         </nav>
 
         {/* CTA */}
-        <button className="rounded-full bg-pink-500 px-5 py-2 text-white text-sm font-medium hover:bg-pink-600 transition">
+        <button className="rounded-full bg-pink-600 px-5 py-2 text-white text-sm font-medium hover:bg-pink-700 transition">
           Call Now
         </button>
       </div>
