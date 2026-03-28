@@ -1,5 +1,7 @@
 // components/sections/Footer.tsx
 
+import { BUSINESS_LOCATION, BUSINESS_NUMBER } from "./Navbar";
+
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white md:text-center py-10 px-6">
@@ -15,8 +17,18 @@ export default function Footer() {
         {/* Contact */}
         <div className="space-y-3">
           <h4 className="font-medium">Contact</h4>
-          <p className="text-white/60 text-sm">📍 Orange, NJ</p>
-          <p className="text-white/60 text-sm">📞 (XXX) XXX-XXXX</p>
+          <p className="text-white/60 text-sm">
+            <a
+              href={BUSINESS_LOCATION}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              📍 Orange, NJ
+            </a>
+          </p>
+          <p className="text-white/60 text-sm">
+            <a href={BUSINESS_NUMBER}>📞 (973) 280-9185</a>
+          </p>
         </div>
 
         {/* Hours */}

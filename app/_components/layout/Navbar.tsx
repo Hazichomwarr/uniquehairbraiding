@@ -3,6 +3,10 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
+export const BUSINESS_NUMBER = "tel:+19732809185";
+export const BUSINESS_LOCATION =
+  "https://www.google.com/maps/search/?api=1&query=123+Main+Street+Orange+NJ";
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
 
@@ -45,9 +49,12 @@ export default function Navbar() {
         </nav>
 
         {/* CTA */}
-        <button className="rounded-full bg-pink-600 px-5 py-2 text-white text-sm font-medium hover:bg-pink-700 transition">
+        <a
+          href={BUSINESS_NUMBER}
+          className="rounded-full bg-pink-600 px-5 py-2 text-white text-sm font-medium hover:bg-pink-700 transition"
+        >
           Call Now
-        </button>
+        </a>
       </div>
     </header>
   );

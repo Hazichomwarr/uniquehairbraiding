@@ -1,5 +1,7 @@
 // components/sections/CTA.tsx
 
+import { BUSINESS_LOCATION, BUSINESS_NUMBER } from "../layout/Navbar";
+
 export default function CTA() {
   return (
     <section className="py-20 px-6 bg-black text-white text-center">
@@ -16,14 +18,22 @@ export default function CTA() {
         </p>
 
         {/* Buttons */}
-        <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
-          <button className="rounded-full bg-pink-500 px-8 py-3 text-lg font-medium hover:bg-pink-600 transition">
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-4 pt-4">
+          <a
+            href={BUSINESS_NUMBER}
+            className="rounded-full bg-pink-600 px-5 py-2 text-white text-lg font-medium hover:bg-pink-700 transition"
+          >
             Call Now
-          </button>
+          </a>
 
-          <button className="rounded-full border border-white px-8 py-3 text-lg font-medium hover:bg-white hover:text-black transition">
+          <a
+            className="rounded-full border border-white px-8 py-3 text-sm font-medium hover:bg-white hover:text-black transition"
+            href={BUSINESS_LOCATION}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Get Directions
-          </button>
+          </a>
         </div>
 
         {/* Extra Info */}

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { BUSINESS_NUMBER } from "../layout/Navbar";
 
 export default function Hero() {
   return (
@@ -52,9 +53,12 @@ export default function Hero() {
           {/* CTA Group */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
             {/* Primary */}
-            <button className="rounded-full bg-pink-600 px-8 py-3 text-white text-lg font-medium shadow-lg hover:bg-pink-700 transition">
+            <a
+              href={BUSINESS_NUMBER}
+              className="rounded-full bg-pink-600 px-5 py-2 text-white text-sm font-medium hover:bg-pink-700 transition"
+            >
               Book Appointment
-            </button>
+            </a>
 
             {/* Secondary */}
             <Link
